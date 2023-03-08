@@ -5,8 +5,5 @@ class Player
  
 end
 
-p = Player.new
-# puts p.input = "7"
-puts p.lives = 2
 
 module.exports = Player
