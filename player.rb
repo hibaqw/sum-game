@@ -1,9 +1,6 @@
 class Player
-  @lives = 3
-  attr_accessor :input
-  attr_writer :lives
- 
+  attr_accessor :input, lives
 end
 
 
-module.exports = Player
+Export = Player
