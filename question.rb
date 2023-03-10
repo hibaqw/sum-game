@@ -1,6 +1,7 @@
 class Question
   def answer 
-   puts @answer = op1 + op2
+   return @op1 + @op2
+
   end
   def generateOperands
     @op1 = rand(20)

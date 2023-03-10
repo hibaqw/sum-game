@@ -9,7 +9,8 @@ def main
   while true
     game.generate_question()
     game.ask_question()
-    ans = gets.chomp
+    user_input = gets.chomp
+    ans = Integer(user_input)
     response = game.game_response(ans)
     if (!response)
       game.reduce_lives
