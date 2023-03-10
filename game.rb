@@ -18,24 +18,27 @@ class Game
   end
   def ask_question()
     player = ""
-    if current_player = @player1
-      player = player + "Player 1"
+    if @current_player === @player1
+      player = "Player 1"
     else
-      player = player + "Player 2"
+      player = "Player 2"
     end
-    puts " #{player} What does #{q.op1} plus #{q.op2} equal?"
+    puts "#{player} What does #{q.op1} plus #{q.op2} equal?"
   end
 
   def game_response(player_response)
+
     @message = ""
-    puts @answer
+    is_correct = false
     if (player_response == @answer)
       message = "YES! You are correct!"
+      is_correct = true
     else 
       message = "Seriously? No!"
     end
     puts message
     puts "-----  NEW TURN -----"
+    return is_correct
   end
 
   def change_player
@@ -52,14 +55,15 @@ class Game
 
   def game_over
     puts "----- GAME OVER -----"
-    puts "----- Good bye! -----"
+    puts "Good bye!"
   end
 
-  attr_reader :q, :operand1, :operand2
+  attr_reader :q, :operand1, :operand2, :current_player
   attr_writer :current_player
   def printLives
-    puts "P1: #{player1.lives}/3 vs P2: #{player2.lives}/3"
+    puts "P1: #{@player1.lives}/3 vs P2: #{@player2.lives}/3"
   end
 end 
 
+Export = Game 
 
