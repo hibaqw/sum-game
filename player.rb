@@ -1,5 +1,5 @@
 class Player
-  attr_accessor :input, lives
+  attr_accessor :input, :lives
 end
 
 
